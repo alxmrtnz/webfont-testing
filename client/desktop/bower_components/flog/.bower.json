@@ -1,0 +1,14 @@
+{
+  "name": "flog",
+  "homepage": "https://github.com/gillesruppert/flog",
+  "version": "0.0.1",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "fcdaee9f4fe59fcfa4d8dd11d2c603017da3dc06"
+  },
+  "_source": "git://github.com/gillesruppert/flog.git",
+  "_target": "~0.0.1",
+  "_originalSource": "flog"
+}

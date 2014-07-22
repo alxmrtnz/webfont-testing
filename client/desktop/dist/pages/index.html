@@ -1,0 +1,68 @@
+<!-- src/default.hbs -->
+<!DOCTYPE html>
+<html class="no-js" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="fragment" content="!" />
+
+        <link rel="stylesheet" href="/assets/css/vendor.9b1b7eca12df01bf62cdd4fd58f5272c7118bddc.css">
+        <link rel="stylesheet" href="/assets/css/app.9b1b7eca12df01bf62cdd4fd58f5272c7118bddc.css">
+
+        <!--[if lt IE 9]>
+           <script>
+              document.createElement('header');
+              document.createElement('nav');
+              document.createElement('section');
+              document.createElement('article');
+              document.createElement('aside');
+              document.createElement('footer');
+           </script>
+        <![endif]-->
+
+    </head>
+    <body>
+        <header>Created By iStrategyLabs</header>
+        <!-- src/index.hbs -->
+        <div>
+          <div>
+            <ul>
+              <li>
+                <h2><a href="/">Home</a></h2>
+              </li>
+              <li>
+                <h2><a href="/view1">View 1</a></h2>
+              </li>
+              <li>
+                <h2><a href="/view2">View 2</a></h2>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div ng-view="" class="container">
+
+        </div>
+        <footer>Created By iStrategyLabs <version></version></footer>
+
+        <script type="text/javascript">
+            ENV = "local";
+            ASSETS_URL = "/assets";
+        </script>
+
+        <!-- Ideally, Facebook, Twitter, Google Analytics, etc.
+           All extrenuous code should either live here, OR
+           be saved in a separate script and required in app.js -->
+
+        <script src="/assets/js/vendor.9b1b7eca12df01bf62cdd4fd58f5272c7118bddc.js"></script>
+        <script src="/assets/js/app.9b1b7eca12df01bf62cdd4fd58f5272c7118bddc.js"></script>
+        
+          <script src="/socket.io/socket.io.js"></script>
+          <script src="dev/reload.js"></script>
+        
+    </body>
+</html>
