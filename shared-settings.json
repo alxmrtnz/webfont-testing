@@ -1,0 +1,70 @@
+{
+    "common": {
+        "primaryLanguage" : "html"
+    },
+    "production": {
+        "portNumber"                   : 3000,
+        "frontendPrimaryServerName"    : "",
+        "frontendPrimarySSLCertName"   : "",
+        "frontendSecondaryServerNames" : [],
+        "backendPrimaryServerName"     : "",
+        "backendPrimarySSLCertName"    : "",
+        "backendSecondaryServerNames"  : [],
+        "dataUrl"                      : "skel-isl-backend.py.islprojects.com",
+        "dataIsSecure"                 : false,
+        "assetsDomain"                 : "",
+        "s3BucketName"                 : ""
+    },
+    "staging": {
+        "portNumber"                   : 3000,
+        "frontendPrimaryServerName"    : "",
+        "frontendPrimarySSLCertName"   : "",
+        "frontendSecondaryServerNames" : [],
+        "backendPrimaryServerName"     : "",
+        "backendPrimarySSLCertName"    : "",
+        "backendSecondaryServerNames"  : [],
+        "dataUrl"                      : "skel-isl-backend.py.islsandbox.com",
+        "dataIsSecure"                 : false,
+        "assetsDomain"                 : "",
+        "s3BucketName"                 : ""
+    },
+    "development": {
+        "portNumber"                   : 3001,
+        "frontendPrimaryServerName"    : "",
+        "frontendPrimarySSLCertName"   : "",
+        "frontendSecondaryServerNames" : [],
+        "backendPrimaryServerName"     : "",
+        "backendPrimarySSLCertName"    : "",
+        "backendSecondaryServerNames"  : [],
+        "dataUrl"                      : "skel-isl-backend.py.islbeans.com",
+        "dataIsSecure"                 : false,
+        "assetsDomain"                 : "s3.amazonaws.com/isl-skel-isl-dev-test.com",
+        "s3BucketName"                 : "isl-skel-isl-dev-test.com"
+    },
+    "virtual": {
+        "portNumber"                   : 3000,
+        "frontendPrimaryServerName"    : "",
+        "frontendPrimarySSLCertName"   : "",
+        "frontendSecondaryServerNames" : [],
+        "backendPrimaryServerName"     : "",
+        "backendPrimarySSLCertName"    : "",
+        "backendSecondaryServerNames"  : [],
+        "dataUrl"                      : "skel-isl-backend.py.dev",
+        "dataIsSecure"                 : false,
+        "assetsDomain"                 : "",
+        "s3BucketName"                 : ""
+    },
+    "local": {
+        "portNumber"                   : 3001,
+        "frontendPrimaryServerName"    : "",
+        "frontendPrimarySSLCertName"   : "",
+        "frontendSecondaryServerNames" : [],
+        "backendPrimaryServerName"     : "",
+        "backendPrimarySSLCertName"    : "",
+        "backendSecondaryServerNames"  : [],
+        "dataUrl"                      : "",
+        "dataIsSecure"                 : false,
+        "assetsDomain"                 : "",
+        "s3BucketName"                 : ""
+    }
+}

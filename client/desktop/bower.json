@@ -1,0 +1,27 @@
+{
+  "name": "skel-isl",
+  "version": "0.0.0",
+  "homepage": "https://github.com/istrategylabs/skel-isl",
+  "authors": [
+    "iStrategyLabs <dev@istrategylabs.com>"
+  ],
+  "directory": "src/lib",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.2",
+    "angular-route": "~1.2.1",
+    "jquery": "~1.10.2",
+    "async": "~0.2.5",
+    "restangular": "~1.1.8",
+    "flog": "~0.0.1"
+  },
+  "exportsOverride": {
+    "async": {
+      "": ["**/async.js"]
+    },
+    "flog": {
+      "": ["**/flog.js"]
+    }
+  }
+}

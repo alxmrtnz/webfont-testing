@@ -1,0 +1,14 @@
+{
+  "name": "skel-isl",
+  "version": "0.0.1",
+  "description": "...",
+  "author": "iStrategyLabs",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "matchdep": "~0.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/istrategylabs/skel-isl.git"
+  }
+}

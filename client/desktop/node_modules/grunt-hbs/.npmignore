@@ -1,0 +1,6 @@
+.project
+.settings
+.svn
+.DS_Store
+node_modules
+bower_components

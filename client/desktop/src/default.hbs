@@ -1,0 +1,52 @@
+<!-- src/default.hbs -->
+<!DOCTYPE html>
+<html class="no-js" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="fragment" content="!" />
+
+        <link rel="stylesheet" href="{{assetsUrl}}/css/vendor.{{version}}.css">
+        <link rel="stylesheet" href="{{assetsUrl}}/css/app.{{version}}.css">
+
+        <!--[if lt IE 9]>
+           <script>
+              document.createElement('header');
+              document.createElement('nav');
+              document.createElement('section');
+              document.createElement('article');
+              document.createElement('aside');
+              document.createElement('footer');
+           </script>
+        <![endif]-->
+
+    </head>
+    <body>
+        <header>Created By iStrategyLabs</header>
+        {{> body }}
+
+        <div ng-view="" class="container">
+
+        </div>
+        <footer>Created By iStrategyLabs <version></version></footer>
+
+        <script type="text/javascript">
+            ENV = "{{environment}}";
+            ASSETS_URL = "{{assetsUrl}}";
+        </script>
+
+        <!-- Ideally, Facebook, Twitter, Google Analytics, etc.
+           All extrenuous code should either live here, OR
+           be saved in a separate script and required in app.js -->
+
+        <script src="{{assetsUrl}}/js/vendor.{{version}}.js"></script>
+        <script src="{{assetsUrl}}/js/app.{{version}}.js"></script>
+        {{#if livereload}}
+          <script src="/socket.io/socket.io.js"></script>
+          <script src="dev/reload.js"></script>
+        {{/if}}
+    </body>
+</html>

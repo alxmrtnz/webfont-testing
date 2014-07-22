@@ -1,0 +1,52 @@
+# client
+
+{% if frontend_secondary_server_names %}
+server {
+  listen 80;
+  server_name {{ frontend_secondary_server_names|join(' ') }};
+  rewrite ^ $scheme://{{ frontend_primary_server_name }}$request_uri? permanent;
+}
+{% endif %}
+
+# {% if frontend_secondary_server_names %}
+# {% for i in frontend_secondary_server_names %}
+# server {
+#   listen 443 ssl;
+#   server_name {{ i }};
+#   ssl_certificate /home/www/certs/{{ i }}.chained.crt;
+#   ssl_certificate_key /home/www/certs/{{ i }}.key;
+#   rewrite ^ $scheme://{{ frontend_primary_server_name }}$request_uri? permanent;
+# }
+# {% endfor %}
+# {% endif %}
+
+server {
+  listen 80;
+  listen 443 ssl;
+
+  server_name
+    {{ frontend_primary_server_name }}
+  ;
+
+  server_tokens off;
+  access_log {{ base }}/log/nginx-access.log;
+  error_log {{ base }}/log/nginx-error.log;
+
+  ssl_certificate /home/www/certs/{{ frontend_ssl_cert }}.chained.crt;
+  ssl_certificate_key /home/www/certs/{{ frontend_ssl_cert }}.key;
+
+  location / {
+    root {{ base }}/project/client/desktop/dist/;
+    try_files $uri $uri/ /index.html =404;
+    index /index.html;
+
+    error_page 404 = /404.html;
+  }
+
+  {% if environment != "production" %}
+  # Fake the robots.txt for non-production environments
+  location /robots.txt {
+    return 200 "User-agent: *\nDisallow: /";
+  }
+  {% endif %}
+}
